@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: AgencyFB-regular;
+    src: url(fonts/AGENCYR.TTF);
+}
+
+@font-face {
+    font-family: AgencyFB-bold;
+    src: url(fonts/AGENCYR.TTF);
+}
+
+@font-face {
+    font-family: Coplette-medium;
+    src: url(fonts/Coplette.otf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+html {
+    font-size: 100%;
+    width: 100vw;
+}
+
+:root {
+    --mainColor1: #EBC296;
+    --mainColor2: #333;
+    --subColor1: #EEE;
+    --subColor2: #aaa;
+    --subColor3: #888;
+    --subColor4: #FDECEF;
+    --subColor5: #ddd;
+    --subColor6: #d9a876;
+
+    --font1: 'Montserrat', sans-serif;
+    --fontSizeBody: 16px;
+    --fontSizeH1: 32px;
+    --fontSizeH1small: 24px;
+    --fontSize20: 20px;
+    --fontSize3: 24px;
+    --fontSize4: 36px;
+
+    --fontRegular: 400;
+    --fontBold: 700;
+    --fontSemiBold: 600;
+    --fontMedium: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+p {
+    color: var(--mainColor2);
+}
+
+p {
+    font-size: var(--fontSizeBody);
+    font-weight: var(--fontRegular);
+}
+
+/* img {
+    -webkit-user-drag: none;
+    user-select: none;
+} */
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--subColor1);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/* header -------------------------------------------------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* my work navigation */
+
+nav h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a,
+nav button {
+    font-size: var(--fontSize20);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--mainColor2);
+    white-space: nowrap;
+
+    position: relative;
+}
+
+nav h1 a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+}
+
+.sub-menu a {
+    color: var(--mainColor1);
+}
+
+.swap-menu {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu {
+    display: none;
+    gap: 80px;
+
+    background-color: white;
+}
+
+.swap-menu:hover .main-link {
+    display: none;
+    height: 100%;
+}
+
+.swap-menu:hover .sub-menu {
+    display: flex;
+}
+
+.swap-menu a::after {
+    background-color: var(--mainColor1);
+}
+
+.menu-button {
+    height: 100%;
+    width: fit-content;
+    align-content: center;
+}
+
+/* avatar */
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+/* webpic title -------------------------------------------------- */
+.heading .title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading .title h1 {
+    font-weight: var(--fontRegular);
+    font-size: var(--fontSizeH1);
+}
+
+.heading .line {
+    width: 1px;
+    align-self: stretch;
+    background-color: var(--mainColor2);
+}
+
+/* webpic tab -------------------------------------------------- */
+.tab-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.tab-nav button {
+    font-size: var(--fontSize20);
+    color: var(--mainColor2);
+}
+
+.tab-nav button:not(.active) {
+    cursor: pointer;
+}
+
+.tab-nav button:hover:not(.active) {
+    font-weight: var(--fontBold);
+}
+
+.tab-nav .active {
+    font-weight: var(--fontBold);
+    color: var(--mainColor1);
+}
+
+/* web pic -------------------------------------------------- */
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.tab-content .device img {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tab-content .device {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    overflow: auto;
+}
+
+.tab-content .device.desktop img {
+    width: 400px;
+}
+
+.tab-content .device.tablet img {
+    width: 300px;
+}
+
+.tab-content .device.mobile img {
+    width: 180px;
+}
+
+/* button live web -------------------------------------------------- */
+.heading .liveweb {
+    background-color: var(--mainColor2);
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(.2, .8, .2, 1);
+}
+
+.heading .liveweb svg,
+.heading .prototype svg {
+    width: 24px;
+    height: 24px;
+}
+
+.heading .liveweb p {
+    color: white;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading .liveweb:hover {
+    background-color: #888;
+}
+
+.heading .right-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading .prototype {
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--mainColor2);
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(.2, .8, .2, 1);
+}
+
+.heading .prototype svg {
+    fill: var(--mainColor2);
+}
+
+.heading .prototype p {
+    color: var(--mainColor2);
+}
+
+.heading .prototype:hover {
+    background-color: #888;
+    border: 1px solid #888;
+}
+
+.heading .prototype:hover p, .heading .prototype:hover svg {
+    color: white;
+    fill: white;
+}
+
+.heading .liveweb p:nth-of-type(2) {
+    display: none;
+}
+
+.heading .right-part a:nth-of-type(3) {
+    display: none;
+}
+
+/* scroll to top -------------------------------------------------- */
+#top-button {
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 99;
+    font-size: 18px;
+    outline: none;
+    background-color: var(--mainColor1);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100px;
+}
+
+#top-button:hover {
+    background-color: var(--subColor6);
+}
+
+#top-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* tải ảnh -------------------------------------------------- */
+
+.download-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+}
+.download-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.download-btn p {
+    font-weight: var(--fontBold);
+}
+.download-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 120px;
+    height: 50px;
+
+    background-color: white;
+    color: var(--mainColor2);
+
+    border-radius: 100px;
+    text-decoration: none;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.download-btn a:hover {
+    transform: scale(1.05);
+}
