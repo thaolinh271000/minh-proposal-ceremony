@@ -111,7 +111,14 @@
         /* mobile: 360px -> 768px -------------------------------------------------- */
         @media screen and (max-width: 768px) {
             .photo-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            .title h1 {
+                font-size: var(--fontSizeH1small);
+            }
+            .album {
+                gap: 20px;
             }
         }
     </style>
