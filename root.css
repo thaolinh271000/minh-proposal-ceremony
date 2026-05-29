@@ -23,7 +23,6 @@
 }
 
 html {
-    zoom: 80%;
     font-size: 100%;
     width: 100vw;
 }
@@ -71,10 +70,10 @@ p {
     font-weight: var(--fontRegular);
 }
 
-/* img {
+img {
     -webkit-user-drag: none;
     user-select: none;
-} */
+}
 
 .center-flex {
     display: flex;
