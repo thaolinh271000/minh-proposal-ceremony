@@ -23,7 +23,6 @@
 }
 
 html {
-    zoom: 0.8;
     font-size: 100%;
     width: 100vw;
 }
@@ -83,6 +82,7 @@ img {
 }
 
 body {
+    zoom: 0.8;
     width: 100%;
     margin: 0;
     padding: 0;
