@@ -23,6 +23,7 @@
 }
 
 html {
+    zoom: 0.8;
     font-size: 100%;
     width: 100vw;
 }
@@ -82,8 +83,7 @@ img {
 }
 
 body {
-    zoom: 0.8;
-    width: 100%;
+    width: 125vw;
     margin: 0;
     padding: 0;
     background-color: var(--subColor1);
@@ -103,6 +103,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    width: 125vw;
 }
 
 nav {
